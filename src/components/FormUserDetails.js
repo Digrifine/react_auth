@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Alert, Form, Button } from 'react-bootstrap';
 
 export class FormUserDetails extends Component {
+
 	continue = (e) => {
 		e.preventDefault();
 		this.props.nextStep();
@@ -39,7 +40,7 @@ export class FormUserDetails extends Component {
 										onChange={handleChange('salutation')}
 										value={values.salutation}
 									/>
-									{formErrors.salutation && (
+									{this.props.formErrors.salutation && (
 										<Alert> This field must be filled</Alert>
 									)}
 								</div>
